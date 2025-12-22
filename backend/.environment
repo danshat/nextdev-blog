@@ -1,0 +1,3 @@
+POSTGRES_USER=nextdev
+POSTGRES_PASSWORD=nextdev
+POSTGRES_DB=nextdev
