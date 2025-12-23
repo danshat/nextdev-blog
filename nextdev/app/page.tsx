@@ -119,7 +119,7 @@ export default async function Home() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Нет данных</p>
               ) : (
                 <div className="space-y-2">
-                  {topPostersToday.map((poster, idx) => (
+                  {topPostersToday.slice(0, 3).map((poster, idx) => (
                     <Link key={poster.author_id} href={`/profile/${poster.author_id}`}>
                       <div className="p-2 mb-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition cursor-pointer">
                         <div className="flex items-center justify-between">
@@ -143,9 +143,9 @@ export default async function Home() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Нет данных</p>
               ) : (
                 <div className="space-y-2">
-                  {topPostersWeek.map((poster, idx) => (
+                  {topPostersWeek.slice(0, 3).map((poster, idx) => (
                     <Link key={poster.author_id} href={`/profile/${poster.author_id}`}>
-                      <div className="p-2 mb-2bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition cursor-pointer">
+                      <div className="p-2 mb-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition cursor-pointer">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <span className="text-sm font-bold text-blue-600 dark:text-blue-400">#{idx + 1}</span>
@@ -167,7 +167,7 @@ export default async function Home() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Нет данных</p>
               ) : (
                 <div className="space-y-2">
-                  {topPostsToday.map((post, idx) => (
+                  {topPostsToday.slice(0, 3).map((post, idx) => (
                     <Link key={post.idposts} href={`/posts/${post.idposts}`}>
                       <div className="p-2 mb-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition cursor-pointer">
                         <div className="flex items-start justify-between gap-2">
@@ -194,7 +194,7 @@ export default async function Home() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Нет данных</p>
               ) : (
                 <div className="space-y-2">
-                  {topPostsWeek.map((post, idx) => (
+                  {topPostsWeek.slice(0, 3).map((post, idx) => (
                     <Link key={post.idposts} href={`/posts/${post.idposts}`}>
                       <div className="p-2 mb-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition cursor-pointer">
                         <div className="flex items-start justify-between gap-2">
